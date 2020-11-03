@@ -1,0 +1,23 @@
+package com.lcs.springcloud.config;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class ConfigBean {
+    /**
+     * 配置RestTemplate
+     * 通过RestTemplate调用提供者服务 ，发送rest请求
+     * 提供了多种访问http服务的方法，
+     * 针对于访问rest服务<strong>客户端</strong>的调用的模板类
+     * @return
+     */
+    @Bean
+   // @LoadBalanced  //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力 默认轮询.
+    // 注意，使用LoadBalanced后，消费端url通过Eureka注册表中的服务名称访问，而不是http://localhost:80801
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
+}
