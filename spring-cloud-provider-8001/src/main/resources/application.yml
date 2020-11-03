@@ -1,0 +1,53 @@
+server:
+  port: 8001
+#  context-path: /study 配置根目录
+spring:
+  application:
+    name: lcs-springcloud-provide  #应用名称
+  datasource:
+    url: jdbc:mysql://localhost:3306/study01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver #mysql驱动包
+    type: com.alibaba.druid.pool.DruidDataSource #当前数据源操作类型
+
+    #druid连接池配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    # 配置监控统计拦截的filters,去掉监控界面sql无法统计，‘wall’用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    userGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#Mybatis配置
+mybatis:
+  #config-location: classpath:mybatis/mybatis.cfg.xml #在resource下创建mybatis文件夹，再建xxx.xml文件
+  type-aliases-package: com.lcs.springcloud.entities  #所有Entity别名所在包 （自定义在api层entities下)
+  mapper-locations: classpath:mybatis/mapper/**/*.xml  #实现dao接口，操作数据源的映射文件
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名
+    cache-enabled: true #开启二级缓存
+
+eureka:
+  client:
+    #找到Eureka服务器
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+     # defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: lcs-springcloud-provide8001 #服务实例名称修改,别名 html页面status处
+    prefer-ip-address: true #访问路径显示IP地址，status处放置鼠标显示
+info:
+  app.name: study-springcloud-micoservices
+  company.name: www.gxs.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
