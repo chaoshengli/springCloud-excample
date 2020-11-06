@@ -9,8 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-cloud-consumer-80" />
         <module name="spring-cloud-eureka-7001" />
+        <module name="spring-cloud-eureka-7002" />
+        <module name="spring-cloud-eureka-7003" />
         <module name="spring-cloud-lcs-api" />
         <module name="spring-cloud-provider-8001" />
+        <module name="spring-cloud-provider-8002" />
+        <module name="spring-cloud-provider-8003" />
       </profile>
     </annotationProcessing>
   </component>

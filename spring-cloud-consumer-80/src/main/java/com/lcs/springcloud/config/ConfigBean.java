@@ -15,9 +15,11 @@ public class ConfigBean {
      * @return
      */
     @Bean
-   // @LoadBalanced  //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力 默认轮询.
+    @LoadBalanced  //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力 默认轮询.
     // 注意，使用LoadBalanced后，消费端url通过Eureka注册表中的服务名称访问，而不是http://localhost:80801
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
+
+
 }

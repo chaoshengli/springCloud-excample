@@ -4,7 +4,11 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-consumer-80" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka-7001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-eureka-7002" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-eureka-7003" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-lcs-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-provider-8001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-provider-8002" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-provider-8003" charset="UTF-8" />
   </component>
 </project>

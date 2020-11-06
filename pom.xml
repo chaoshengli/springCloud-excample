@@ -14,6 +14,10 @@
         <module>spring-cloud-provider-8001</module>
         <module>spring-cloud-consumer-80</module>
         <module>spring-cloud-eureka-7001</module>
+        <module>spring-cloud-eureka-7002</module>
+        <module>spring-cloud-eureka-7003</module>
+        <module>spring-cloud-provider-8002</module>
+        <module>spring-cloud-provider-8003</module>
     </modules>
 
     <properties>
@@ -91,6 +95,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--展示服务器信息:yml的info配置-->
     <build>
         <!--finalName 父工程名称-->
         <finalName>spring-cloud-lcs</finalName>
@@ -108,6 +113,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <delimiters>
+                        <!--读节能以$符号开头结尾的配置，在src/main/resources路径下，即8001服务端yml里info下的$之间的内容$-->
                         <delimit>$</delimit>
                     </delimiters>
                 </configuration>

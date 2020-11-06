@@ -14,7 +14,8 @@ Date: 2019-03-31 01:22:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
+create database study02;
+use study02;
 -- ----------------------------
 -- Table structure for dept
 -- ----------------------------

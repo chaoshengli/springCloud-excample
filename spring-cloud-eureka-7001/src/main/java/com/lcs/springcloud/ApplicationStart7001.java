@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaServer //启用eureka,访问http://localhost:7001注册中心
+@EnableEurekaServer //启用eureka,访问http://localhost:7003注册中心
 public class ApplicationStart7001 {
     public static void main(String[] args) {
 //        SpringApplication.run(ApplicationStart7001.class,args); 两种方式
