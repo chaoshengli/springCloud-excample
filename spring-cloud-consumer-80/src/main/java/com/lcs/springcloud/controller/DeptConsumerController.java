@@ -27,7 +27,7 @@ public class DeptConsumerController {
                 Boolean.class);
     }
 
-    @RequestMapping("/consumer/dept/get/{deptNo}")
+    @RequestMapping(value = "/consumer/dept/get/{deptNo}")
     public DeptEntity findById(@PathVariable("deptNo") Long deptNo){
         //三个参数：url,requestMap ResponseBean.class
         return  restTemplate.getForObject(
@@ -51,6 +51,7 @@ public class DeptConsumerController {
     @GetMapping(value = "/consumer/dept/discovery")
     public Object discovery(){
         return restTemplate.getForObject(REST_URL_PREFIX+"/provider/discovery",Object.class);
+        //页面输出 "lcs-springcloud-provide"
     }
 }
 /**

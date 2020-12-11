@@ -33,7 +33,7 @@ public class DeptController {
         return deptService.get(id);
     }
 
-    @RequestMapping(value = "/dept/list", method = RequestMethod.GET) //另一种方式
+    @RequestMapping(value = "/dept/list", method = RequestMethod.GET) //另一种GET写法方式
     public List<DeptEntity> list() {
         return deptService.list();
     }

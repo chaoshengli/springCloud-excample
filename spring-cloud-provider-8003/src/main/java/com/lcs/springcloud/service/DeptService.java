@@ -12,7 +12,7 @@ public interface DeptService {
      * @param deptEntity
      * @return
      */
-    Boolean add(DeptEntity deptEntity);
+    boolean add(DeptEntity deptEntity);
 
     /**
      * 根据id查找
