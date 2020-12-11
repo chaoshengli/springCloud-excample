@@ -18,6 +18,10 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope> <!--只在本地编译生效-->
         </dependency>
-
+        <!--feign相关引用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
     </dependencies>
 </project>
